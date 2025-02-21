@@ -10,7 +10,7 @@ const SearchBar = ({
   return (
     <div className="flex mt-10 justify-between">
       <div
-        className={`flex gap-5 items-center rounded-lg shadow-lg ml-10 
+        className={`flex gap-5 items-center rounded-lg shadow-lg ml-10 w-[35%]
         ${darkMode ? "bg-[#213943] text-white" : "bg-white text-black"}`}
       >
         <CiSearch className="h-7 w-7 ml-5 text-gray-500" />

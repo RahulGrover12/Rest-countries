@@ -24,7 +24,7 @@ const Filter = ({ flagData, setFlagData, darkMode }) => {
   };
 
   return (
-    <div>
+    <div className="w-[17%]">
       <select
         name="filter-by-region"
         className={`h-13 w-60 shadow-md rounded-xl text-lg mr-10 p-3 px-5 appearance-none focus:outline-none

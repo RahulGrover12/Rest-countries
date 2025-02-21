@@ -17,7 +17,7 @@ const DarkMode = ({ darkMode, setDarkMode }) => {
       ) : (
         <IoMoonOutline className="h-6 w-6 mt-[4px]" />
       )}
-      <p className="text-xl font-medium mr-10">
+      <p className="text-lg font-medium mr-10 lg:text-xl">
         <button
           className="cursor-pointer"
           onClick={() => setDarkMode((prev) => !prev)}

@@ -17,7 +17,7 @@ const FlagCards = ({ newFlagData, loading, error, darkMode }) => {
   }
 
   return (
-    <section className="grid grid-cols-4 gap-10 mt-30 place-items-center">
+    <section className="grid grid-cols-1 gap-10 mt-30 place-items-center md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
       {newFlagData.map((flag, index) => {
         return <SingleFlagCard key={index} flag={flag} darkMode={darkMode} />;
       })}
