@@ -1,6 +1,9 @@
+import { useContext } from "react";
 import DarkMode from "./DarkMode";
+import { ThemeContext } from "../context/ThemeContext";
 
-const Header = ({ darkMode, setDarkMode }) => {
+const Header = () => {
+  const { darkMode, setDarkMode } = useContext(ThemeContext);
   return (
     <div
       className={`w-full h-25 shadow-md flex items-center justify-between 

@@ -1,6 +1,9 @@
+import { useContext } from "react";
 import SingleFlagCard from "./SingleFlagCard";
+import { ThemeContext } from "../context/ThemeContext";
 
-const FlagCards = ({ newFlagData, loading, error, darkMode }) => {
+const FlagCards = ({ newFlagData, loading, error }) => {
+  const { darkMode } = useContext(ThemeContext);
   if (loading) {
     return (
       <h1 className="flex justify-center text-5xl font-medium mt-50">

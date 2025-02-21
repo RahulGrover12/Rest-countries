@@ -1,15 +1,8 @@
-import { useEffect } from "react";
+import { useContext } from "react";
 import { IoMoonOutline, IoMoonSharp } from "react-icons/io5";
-const DarkMode = ({ darkMode, setDarkMode }) => {
-  useEffect(() => {
-    if (darkMode) {
-      document.body.style.backgroundColor = "#1c2c37";
-      document.body.style.color = "white";
-    } else {
-      document.body.style.backgroundColor = "white";
-      document.body.style.color = "black";
-    }
-  }, [darkMode]);
+import { ThemeContext } from "../context/ThemeContext";
+const DarkMode = () => {
+  const { darkMode, setDarkMode } = useContext(ThemeContext);
   return (
     <div className="flex gap-3">
       {darkMode ? (
