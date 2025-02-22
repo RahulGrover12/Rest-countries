@@ -122,7 +122,7 @@ const Flags = () => {
                     borderCountries.map((borderCountry) => (
                       <button
                         key={borderCountry.cca3}
-                        className={` cursor-pointer${
+                        className={` cursor-pointer ${
                           darkMode
                             ? "bg-[#2b3743] text-white"
                             : "bg-white text-black"

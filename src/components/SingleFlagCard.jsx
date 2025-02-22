@@ -9,7 +9,7 @@ const SingleFlagCard = ({ flag }) => {
   return (
     <>
       <div
-        className={`h-90 w-75 shadow-md rounded-xl hover:scale-102 
+        className={`h-90 w-75 shadow-md rounded-xl hover:scale-102 cursor-pointer
       ${darkMode ? "bg-[#213943] text-white" : "bg-white text-black"}`}
         onClick={() => navigate(`/${flag.name.common}`)}
         key={flag.name.common}

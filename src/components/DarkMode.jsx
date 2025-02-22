@@ -4,7 +4,7 @@ import { ThemeContext } from "../context/ThemeContext";
 const DarkMode = () => {
   const { darkMode, setDarkMode } = useContext(ThemeContext);
   return (
-    <div className="flex gap-3">
+    <div className="flex gap-3 cursor-pointer">
       {darkMode ? (
         <IoMoonSharp className="h-6 w-6 mt-[4px] text-gray-500" />
       ) : (

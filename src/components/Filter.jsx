@@ -29,7 +29,7 @@ const Filter = ({ flagData, setFlagData }) => {
       <div className="w-[17%]">
         <select
           name="filter-by-region"
-          className={`h-13 w-60 shadow-md rounded-xl text-lg p-3 px-5 appearance-none focus:outline-none
+          className={`h-13 w-60 shadow-md cursor-pointer rounded-xl text-lg p-3 px-5 appearance-none focus:outline-none
             ${darkMode ? "bg-[#213943] text-white" : "bg-white text-black"}`}
           value={selectedRegion}
           onChange={handleSelectedRegion}
