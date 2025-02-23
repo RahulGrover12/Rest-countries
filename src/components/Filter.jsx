@@ -15,6 +15,7 @@ const Filter = () => {
     if (originalData.length === 0) {
       setOriginalData(flagData);
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [flagData]);
 
   const applyFiltersAndSorting = (region, subRegion, sort) => {
