@@ -1,65 +1,17 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext } from "react";
 import { ThemeContext } from "../context/ThemeContext";
 
-const Sorting = ({ flagData, setFlagData }) => {
-  const [originalData, setOriginalData] = useState([]);
-  const [selectedSort, setSelectedSort] = useState("All");
+const Sorting = ({ selectedSort, handleSort }) => {
   const { darkMode } = useContext(ThemeContext);
 
-  useEffect(() => {
-    if (originalData.length === 0) {
-      setOriginalData(flagData);
-    }
-  }, [flagData]);
-
-  const handleSelectedSort = (e) => {
-    const val = e.target.value;
-    setSelectedSort(val);
-
-    switch (val) {
-      case "All":
-        setFlagData(originalData);
-        break;
-
-      case "popDesc": {
-        const desc = [...originalData].sort(
-          (a, b) => b.population - a.population
-        );
-        setFlagData(desc);
-        break;
-      }
-
-      case "popAsc": {
-        const asc = [...originalData].sort(
-          (a, b) => a.population - b.population
-        );
-        setFlagData(asc);
-        break;
-      }
-      case "areaDesc": {
-        const desc = [...originalData].sort((a, b) => b.area - a.area);
-        setFlagData(desc);
-        break;
-      }
-      case "areaAsc": {
-        const asc = [...originalData].sort((a, b) => a.area - b.area);
-        setFlagData(asc);
-        break;
-      }
-
-      default:
-        setFlagData(originalData);
-    }
-  };
-
   return (
-    <div className="w-[17%]">
+    <div className="w-full md:w-[24%]">
       <select
-        name="filter-by-region"
-        className={`h-13 w-60 shadow-md rounded-xl text-lg mr-10 p-3 px-5 appearance-none cursor-pointer focus:outline-none
-        ${darkMode ? "bg-[#213943] text-white" : "bg-white text-black"}`}
+        className={`w-full h-12 shadow-md rounded-xl text-lg p-3 px-5 appearance-none cursor-pointer focus:outline-none ${
+          darkMode ? "bg-[#213943] text-white" : "bg-white text-black"
+        }`}
         value={selectedSort}
-        onChange={handleSelectedSort}
+        onChange={(e) => handleSort(e.target.value)}
       >
         <option value="All" className="hidden">
           Sort By:
