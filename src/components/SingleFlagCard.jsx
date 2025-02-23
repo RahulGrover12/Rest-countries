@@ -3,13 +3,12 @@ import { ThemeContext } from "../context/ThemeContext";
 import { useNavigate } from "react-router-dom";
 
 const SingleFlagCard = ({ flag }) => {
-  // console.log(flag);
   const { darkMode } = useContext(ThemeContext);
   const navigate = useNavigate();
   return (
     <>
       <div
-        className={`h-90 w-75 shadow-md rounded-xl hover:scale-102 cursor-pointer
+        className={`h-95 w-75 shadow-md rounded-xl hover:scale-102 cursor-pointer
       ${darkMode ? "bg-[#213943] text-white" : "bg-white text-black"}`}
         onClick={() => navigate(`/${flag.name.common}`)}
         key={flag.name.common}
@@ -32,6 +31,9 @@ const SingleFlagCard = ({ flag }) => {
             </li>
             <li>
               Capital: <span className="font-light">{flag.capital}</span>
+            </li>
+            <li>
+              Area: <span className="font-light">{flag.area}</span>
             </li>
           </ul>
         </div>
